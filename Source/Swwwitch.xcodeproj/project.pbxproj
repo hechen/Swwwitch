@@ -110,6 +110,7 @@
 		743B6454224E762E004F9D26 /* Swwwitch */ = {
 			isa = PBXGroup;
 			children = (
+				748EE59C224F6C0C001DB63A /* Extension */,
 				743B6493224F3D36004F9D26 /* Switch */,
 				743B6455224E762E004F9D26 /* AppDelegate.swift */,
 				743B6459224E762F004F9D26 /* Assets.xcassets */,
@@ -120,7 +121,6 @@
 				743B6483224F1D32004F9D26 /* AppDefaults.swift */,
 				743B6485224F24B9004F9D26 /* SwitchViewController.swift */,
 				743B648B224F3059004F9D26 /* EventMonitor.swift */,
-				743B648D224F33B0004F9D26 /* NSView+.swift */,
 				743B6494224F3D56004F9D26 /* Appearance.swift */,
 			);
 			path = Swwwitch;
@@ -151,6 +151,14 @@
 				743B648F224F3B66004F9D26 /* NSSwitch.swift */,
 			);
 			path = Switch;
+			sourceTree = "<group>";
+		};
+		748EE59C224F6C0C001DB63A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				743B648D224F33B0004F9D26 /* NSView+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +230,9 @@
 					743B6451224E762D004F9D26 = {
 						CreatedOnToolsVersion = 10.2;
 						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
 							com.apple.Sandbox = {
 								enabled = 0;
 							};
