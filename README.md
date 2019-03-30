@@ -4,7 +4,12 @@
 Just a swith tutorial.
 
 
-![Interface](.assets/main.png)
+![Interface-c300](.assets/main.png)
+
+
+Switch your system theme need your authorization. Just click OK.
+
+![System Event-c300](.assets/systemEvent.png)
 
 
 ## Logic Under the hood
