@@ -12,28 +12,38 @@ import Foundation
  U can find all avaliable bash commands here.
  https://gist.github.com/demoive/1fb18a74defe724a47aa
  */
+typealias ProcessStatus = Bool
+typealias ProcessResult = String
+
+typealias ProcessTerminateResult = (success: ProcessStatus, output: ProcessResult?)
 
 protocol Task {
     var arguments: [String] { get }
     var launchPath: String { get }
-    func execute() -> Bool
+    func executeSync() -> ProcessTerminateResult
 }
 
 extension Task {
     var launchPath: String {
         return "/bin/bash"
     }
-}
-
-extension Task {
-    func execute() -> Bool {
+    
+    func executeSync() -> ProcessTerminateResult {
         let process = Process()
         process.launchPath = launchPath
         process.arguments = arguments
         
+        let output = Pipe()
+        process.standardOutput = output
+        
         process.launch()
         process.waitUntilExit()
-        return process.terminationStatus == 0
+        
+        let data = output.fileHandleForReading.readDataToEndOfFile()
+        if let result = String(data: data, encoding: .utf8) {
+            return (process.terminationStatus == 0, result)
+        }
+        return (process.terminationStatus == 0, nil)
     }
 }
 
@@ -58,6 +68,11 @@ class SwitchDesktopIconTask: Task {
     }
 }
 
-class ThemeTask {
-    
+class ReadDesktopIconHiddenTask: Task {    
+    var arguments: [String] {
+        return [
+        "-c",
+        "defaults read com.apple.finder CreateDesktop"
+        ]
+    }
 }

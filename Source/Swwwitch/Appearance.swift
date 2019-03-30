@@ -14,14 +14,24 @@ class Appearance {
         return NSAppearance.current.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
     }
     
-    class func switchTheme() -> Bool {
-        let myAppleScript = #"""
+    class func switchTheme(dark: Bool) -> Bool {
+        
+        let myAppleScript = dark ? #"""
             tell application "System Events"
                 tell appearance preferences
-                    set dark mode to not dark mode
+                    set dark mode to true
                 end tell
             end tell
-            """#
+        """# : #"""
+        tell application "System Events"
+        tell appearance preferences
+        set dark mode to false
+        end tell
+        end tell
+        """#
+        
+        
+        
         var error: NSDictionary?
         guard let scriptObject = NSAppleScript(source: myAppleScript) else { return false }
         scriptObject.executeAndReturnError(&error)

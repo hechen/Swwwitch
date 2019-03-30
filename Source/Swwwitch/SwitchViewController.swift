@@ -26,10 +26,10 @@ class SwitchViewController: NSViewController {
         hideDesktopContainerView.backgroundColor = .clear
         
         hideIconsSwitch.delegate = self
-        hideIconsSwitch.setOn(on: AppDefaults.shared.desktopIconsHidden, animated: false)
+        hideIconsSwitch.setOn(on: DesktopIconHelper.hidden(), animated: true)
         
         themeSwitch.delegate = self
-        themeSwitch.setOn(on: Appearance.isDarkTheme, animated: false)
+        themeSwitch.setOn(on: Appearance.isDarkTheme, animated: true)
     }
     
     @IBAction func quitAction(_ sender: Any) {
@@ -41,14 +41,13 @@ extension SwitchViewController : NSSwitchDelegate {
     func switchChanged(switch switcher: NSSwitch) {
         switch switcher {
         case hideIconsSwitch:
-            if AppDefaults.shared.desktopIconsHidden == switcher.on { return }
-            let task: Task = SwitchDesktopIconTask(hide: switcher.on)
-            if task.execute() {
-                AppDefaults.shared.desktopIconsHidden = !AppDefaults.shared.desktopIconsHidden
+            if !DesktopIconHelper.switchHidden(switcher.on) {
+                print("Switch Hidden Failed!")
             }
         case themeSwitch:
-            if Appearance.isDarkTheme == switcher.on { return }
-            _ = Appearance.switchTheme()
+            if !Appearance.switchTheme(dark: switcher.on) {
+                print("Switch Theme Failed!")
+            }
             
         default: break
             

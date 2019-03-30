@@ -13,13 +13,13 @@
 		743B6469224E7630004F9D26 /* SwwwitchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B6468224E7630004F9D26 /* SwwwitchTests.swift */; };
 		743B6474224E7630004F9D26 /* SwwwitchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B6473224E7630004F9D26 /* SwwwitchUITests.swift */; };
 		743B6482224E97E2004F9D26 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B6481224E97E2004F9D26 /* Task.swift */; };
-		743B6484224F1D32004F9D26 /* AppDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B6483224F1D32004F9D26 /* AppDefaults.swift */; };
 		743B6486224F24B9004F9D26 /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B6485224F24B9004F9D26 /* SwitchViewController.swift */; };
 		743B648C224F3059004F9D26 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B648B224F3059004F9D26 /* EventMonitor.swift */; };
 		743B648E224F33B0004F9D26 /* NSView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B648D224F33B0004F9D26 /* NSView+.swift */; };
 		743B6490224F3B66004F9D26 /* NSSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B648F224F3B66004F9D26 /* NSSwitch.swift */; };
 		743B6492224F3BDE004F9D26 /* NSSwitchThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B6491224F3BDE004F9D26 /* NSSwitchThumbView.swift */; };
 		743B6495224F3D56004F9D26 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B6494224F3D56004F9D26 /* Appearance.swift */; };
+		74AE17C1224FA0DD001A392B /* DesktopIconHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AE17C0224FA0DD001A392B /* DesktopIconHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,13 +53,13 @@
 		743B6473224E7630004F9D26 /* SwwwitchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwwwitchUITests.swift; sourceTree = "<group>"; };
 		743B6475224E7630004F9D26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		743B6481224E97E2004F9D26 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		743B6483224F1D32004F9D26 /* AppDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefaults.swift; sourceTree = "<group>"; };
 		743B6485224F24B9004F9D26 /* SwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
 		743B648B224F3059004F9D26 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		743B648D224F33B0004F9D26 /* NSView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+.swift"; sourceTree = "<group>"; };
 		743B648F224F3B66004F9D26 /* NSSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSSwitch.swift; sourceTree = "<group>"; };
 		743B6491224F3BDE004F9D26 /* NSSwitchThumbView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSSwitchThumbView.swift; sourceTree = "<group>"; };
 		743B6494224F3D56004F9D26 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		74AE17C0224FA0DD001A392B /* DesktopIconHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopIconHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +118,10 @@
 				743B645E224E762F004F9D26 /* Info.plist */,
 				743B645F224E762F004F9D26 /* Swwwitch.entitlements */,
 				743B6481224E97E2004F9D26 /* Task.swift */,
-				743B6483224F1D32004F9D26 /* AppDefaults.swift */,
 				743B6485224F24B9004F9D26 /* SwitchViewController.swift */,
 				743B648B224F3059004F9D26 /* EventMonitor.swift */,
 				743B6494224F3D56004F9D26 /* Appearance.swift */,
+				74AE17C0224FA0DD001A392B /* DesktopIconHelper.swift */,
 			);
 			path = Swwwitch;
 			sourceTree = "<group>";
@@ -301,7 +301,7 @@
 			files = (
 				743B6492224F3BDE004F9D26 /* NSSwitchThumbView.swift in Sources */,
 				743B6495224F3D56004F9D26 /* Appearance.swift in Sources */,
-				743B6484224F1D32004F9D26 /* AppDefaults.swift in Sources */,
+				74AE17C1224FA0DD001A392B /* DesktopIconHelper.swift in Sources */,
 				743B6490224F3B66004F9D26 /* NSSwitch.swift in Sources */,
 				743B6486224F24B9004F9D26 /* SwitchViewController.swift in Sources */,
 				743B648C224F3059004F9D26 /* EventMonitor.swift in Sources */,
