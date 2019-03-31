@@ -8,6 +8,10 @@
 
 import Cocoa
 
+extension Notification.Name {
+    static let killLauncher = Notification.Name("killLauncher")
+}
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
@@ -29,6 +33,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if self.popover.isShown {
                 self.closePopover(sender: event)
             }
+        }
+        
+        
+        let launcherAppId = "app.chen.osx.SwwwitchLauncher"
+        let runningApps = NSWorkspace.shared.runningApplications
+        let isRunning = !runningApps.filter { $0.bundleIdentifier == launcherAppId }.isEmpty
+        
+        if isRunning {
+            DistributedNotificationCenter.default().post(name: .killLauncher,
+                                                         object: Bundle.main.bundleIdentifier!)
         }
     }
 

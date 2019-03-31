@@ -20,6 +20,11 @@
 		743B6492224F3BDE004F9D26 /* NSSwitchThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B6491224F3BDE004F9D26 /* NSSwitchThumbView.swift */; };
 		743B6495224F3D56004F9D26 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B6494224F3D56004F9D26 /* Appearance.swift */; };
 		74AE17C1224FA0DD001A392B /* DesktopIconHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AE17C0224FA0DD001A392B /* DesktopIconHelper.swift */; };
+		74C073F522506DA900D7E882 /* NSButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C073F422506DA900D7E882 /* NSButton+.swift */; };
+		74C073F92250721900D7E882 /* SwwwitchLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74C7FC6622506C20001DA9A7 /* SwwwitchLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		74C7FC6922506C20001DA9A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C7FC6822506C20001DA9A7 /* AppDelegate.swift */; };
+		74C7FC6D22506C21001DA9A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74C7FC6C22506C21001DA9A7 /* Assets.xcassets */; };
+		74C7FC7022506C21001DA9A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C7FC6E22506C21001DA9A7 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,19 @@
 			remoteInfo = Swwwitch;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		74C073F82250720900D7E882 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				74C073F92250721900D7E882 /* SwwwitchLauncher.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		743B6452224E762D004F9D26 /* Swwwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swwwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +78,13 @@
 		743B6491224F3BDE004F9D26 /* NSSwitchThumbView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSSwitchThumbView.swift; sourceTree = "<group>"; };
 		743B6494224F3D56004F9D26 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		74AE17C0224FA0DD001A392B /* DesktopIconHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopIconHelper.swift; sourceTree = "<group>"; };
+		74C073F422506DA900D7E882 /* NSButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSButton+.swift"; sourceTree = "<group>"; };
+		74C7FC6622506C20001DA9A7 /* SwwwitchLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwwwitchLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74C7FC6822506C20001DA9A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		74C7FC6C22506C21001DA9A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74C7FC6F22506C21001DA9A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		74C7FC7122506C21001DA9A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74C7FC7222506C21001DA9A7 /* SwwwitchLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwwwitchLauncher.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +109,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		74C7FC6322506C20001DA9A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -93,6 +125,7 @@
 				743B6454224E762E004F9D26 /* Swwwitch */,
 				743B6467224E7630004F9D26 /* SwwwitchTests */,
 				743B6472224E7630004F9D26 /* SwwwitchUITests */,
+				74C7FC6722506C20001DA9A7 /* SwwwitchLauncher */,
 				743B6453224E762D004F9D26 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +136,7 @@
 				743B6452224E762D004F9D26 /* Swwwitch.app */,
 				743B6464224E7630004F9D26 /* SwwwitchTests.xctest */,
 				743B646F224E7630004F9D26 /* SwwwitchUITests.xctest */,
+				74C7FC6622506C20001DA9A7 /* SwwwitchLauncher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,8 +191,21 @@
 			isa = PBXGroup;
 			children = (
 				743B648D224F33B0004F9D26 /* NSView+.swift */,
+				74C073F422506DA900D7E882 /* NSButton+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		74C7FC6722506C20001DA9A7 /* SwwwitchLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				74C7FC6822506C20001DA9A7 /* AppDelegate.swift */,
+				74C7FC6C22506C21001DA9A7 /* Assets.xcassets */,
+				74C7FC6E22506C21001DA9A7 /* Main.storyboard */,
+				74C7FC7122506C21001DA9A7 /* Info.plist */,
+				74C7FC7222506C21001DA9A7 /* SwwwitchLauncher.entitlements */,
+			);
+			path = SwwwitchLauncher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +218,7 @@
 				743B644E224E762D004F9D26 /* Sources */,
 				743B644F224E762D004F9D26 /* Frameworks */,
 				743B6450224E762D004F9D26 /* Resources */,
+				74C073F82250720900D7E882 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -217,6 +265,23 @@
 			productReference = 743B646F224E7630004F9D26 /* SwwwitchUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		74C7FC6522506C20001DA9A7 /* SwwwitchLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74C7FC7522506C21001DA9A7 /* Build configuration list for PBXNativeTarget "SwwwitchLauncher" */;
+			buildPhases = (
+				74C7FC6222506C20001DA9A7 /* Sources */,
+				74C7FC6322506C20001DA9A7 /* Frameworks */,
+				74C7FC6422506C20001DA9A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwwwitchLauncher;
+			productName = SwwwitchLauncher;
+			productReference = 74C7FC6622506C20001DA9A7 /* SwwwitchLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -246,6 +311,9 @@
 						CreatedOnToolsVersion = 10.2;
 						TestTargetID = 743B6451224E762D004F9D26;
 					};
+					74C7FC6522506C20001DA9A7 = {
+						CreatedOnToolsVersion = 10.2;
+					};
 				};
 			};
 			buildConfigurationList = 743B644D224E762D004F9D26 /* Build configuration list for PBXProject "Swwwitch" */;
@@ -264,6 +332,7 @@
 				743B6451224E762D004F9D26 /* Swwwitch */,
 				743B6463224E7630004F9D26 /* SwwwitchTests */,
 				743B646E224E7630004F9D26 /* SwwwitchUITests */,
+				74C7FC6522506C20001DA9A7 /* SwwwitchLauncher */,
 			);
 		};
 /* End PBXProject section */
@@ -292,6 +361,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		74C7FC6422506C20001DA9A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C7FC6D22506C21001DA9A7 /* Assets.xcassets in Resources */,
+				74C7FC7022506C21001DA9A7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -299,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74C073F522506DA900D7E882 /* NSButton+.swift in Sources */,
 				743B6492224F3BDE004F9D26 /* NSSwitchThumbView.swift in Sources */,
 				743B6495224F3D56004F9D26 /* Appearance.swift in Sources */,
 				74AE17C1224FA0DD001A392B /* DesktopIconHelper.swift in Sources */,
@@ -327,6 +406,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		74C7FC6222506C20001DA9A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C7FC6922506C20001DA9A7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -347,6 +434,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				743B645C224E762F004F9D26 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		74C7FC6E22506C21001DA9A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74C7FC6F22506C21001DA9A7 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -484,6 +579,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = app.chen.osx.Swwwitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -503,6 +599,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = app.chen.osx.Swwwitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -589,6 +686,46 @@
 			};
 			name = Release;
 		};
+		74C7FC7322506C21001DA9A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwwwitchLauncher/SwwwitchLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = NM8T9PQ2C4;
+				INFOPLIST_FILE = SwwwitchLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.chen.osx.SwwwitchLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		74C7FC7422506C21001DA9A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwwwitchLauncher/SwwwitchLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = NM8T9PQ2C4;
+				INFOPLIST_FILE = SwwwitchLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.chen.osx.SwwwitchLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -624,6 +761,15 @@
 			buildConfigurations = (
 				743B647F224E7630004F9D26 /* Debug */,
 				743B6480224E7630004F9D26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74C7FC7522506C21001DA9A7 /* Build configuration list for PBXNativeTarget "SwwwitchLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C7FC7322506C21001DA9A7 /* Debug */,
+				74C7FC7422506C21001DA9A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -11,11 +10,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Swwwitch" id="1Xt-HY-uBw">
+                            <menuItem title="SwwwitchLauncher" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Swwwitch" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="SwwwitchLauncher" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About Swwwitch" id="5kV-Vb-QxS">
+                                        <menuItem title="About SwwwitchLauncher" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -29,7 +28,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide Swwwitch" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide SwwwitchLauncher" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -47,7 +46,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit Swwwitch" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit SwwwitchLauncher" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -345,37 +344,17 @@
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <menu key="submenu" title="Font" systemMenu="font" id="aXa-aM-Jaq">
                                                 <items>
-                                                    <menuItem title="Show Fonts" keyEquivalent="t" id="Q5e-8K-NDq">
-                                                        <connections>
-                                                            <action selector="orderFrontFontPanel:" target="YLy-65-1bz" id="WHr-nq-2xA"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Bold" tag="2" keyEquivalent="b" id="GB9-OM-e27">
-                                                        <connections>
-                                                            <action selector="addFontTrait:" target="YLy-65-1bz" id="hqk-hr-sYV"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Italic" tag="1" keyEquivalent="i" id="Vjx-xi-njq">
-                                                        <connections>
-                                                            <action selector="addFontTrait:" target="YLy-65-1bz" id="IHV-OB-c03"/>
-                                                        </connections>
-                                                    </menuItem>
+                                                    <menuItem title="Show Fonts" keyEquivalent="t" id="Q5e-8K-NDq"/>
+                                                    <menuItem title="Bold" tag="2" keyEquivalent="b" id="GB9-OM-e27"/>
+                                                    <menuItem title="Italic" tag="1" keyEquivalent="i" id="Vjx-xi-njq"/>
                                                     <menuItem title="Underline" keyEquivalent="u" id="WRG-CD-K1S">
                                                         <connections>
                                                             <action selector="underline:" target="Ady-hI-5gd" id="FYS-2b-JAY"/>
                                                         </connections>
                                                     </menuItem>
                                                     <menuItem isSeparatorItem="YES" id="5gT-KC-WSO"/>
-                                                    <menuItem title="Bigger" tag="3" keyEquivalent="+" id="Ptp-SP-VEL">
-                                                        <connections>
-                                                            <action selector="modifyFont:" target="YLy-65-1bz" id="Uc7-di-UnL"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Smaller" tag="4" keyEquivalent="-" id="i1d-Er-qST">
-                                                        <connections>
-                                                            <action selector="modifyFont:" target="YLy-65-1bz" id="HcX-Lf-eNd"/>
-                                                        </connections>
-                                                    </menuItem>
+                                                    <menuItem title="Bigger" tag="3" keyEquivalent="+" id="Ptp-SP-VEL"/>
+                                                    <menuItem title="Smaller" tag="4" keyEquivalent="-" id="i1d-Er-qST"/>
                                                     <menuItem isSeparatorItem="YES" id="kx3-Dk-x3B"/>
                                                     <menuItem title="Kern" id="jBQ-r6-VK2">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
@@ -660,7 +639,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="Swwwitch Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="SwwwitchLauncher Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -674,137 +653,10 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Swwwitch" customModuleProvider="target"/>
-                <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="SwwwitchLauncher" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Switch View Controller-->
-        <scene sceneID="hIz-AP-VOD">
-            <objects>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="SwitchViewController" id="XfG-lQ-9wD" customClass="SwitchViewController" customModule="Swwwitch" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="350"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <button translatesAutoresizingMaskIntoConstraints="NO" id="1Xm-Jg-7Q7">
-                                <rect key="frame" x="258" y="10" width="22" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="22" id="Hjp-BZ-yZR"/>
-                                    <constraint firstAttribute="height" constant="22" id="cpP-g0-wYo"/>
-                                </constraints>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="LogOut" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="YSV-F8-yOY">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <string key="keyEquivalent">q</string>
-                                    <connections>
-                                        <action selector="quitAction:" target="XfG-lQ-9wD" id="Xwa-Rm-tuY"/>
-                                    </connections>
-                                </buttonCell>
-                            </button>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEU-5f-0Zw">
-                                <rect key="frame" x="18" y="174" width="265" height="101"/>
-                                <subviews>
-                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="hrR-l2-TDg">
-                                        <rect key="frame" x="0.0" y="51" width="265" height="50"/>
-                                        <subviews>
-                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="26N-av-2RY" customClass="NSSwitch" customModule="Swwwitch" customModuleProvider="target">
-                                                <rect key="frame" x="217" y="15" width="30" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="Xhb-hn-MtF"/>
-                                                    <constraint firstAttribute="height" constant="20" id="f5b-SX-yNQ"/>
-                                                </constraints>
-                                            </customView>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="n4c-O8-8ji">
-                                                <rect key="frame" x="16" y="15" width="98" height="21"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Dark Theme" id="UWo-E6-y6p">
-                                                    <font key="font" metaFont="system" size="17"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="9E8-6R-Dza"/>
-                                            <constraint firstAttribute="trailing" secondItem="26N-av-2RY" secondAttribute="trailing" constant="18" id="M1X-XP-DmN"/>
-                                            <constraint firstItem="26N-av-2RY" firstAttribute="centerY" secondItem="hrR-l2-TDg" secondAttribute="centerY" id="Rv7-bN-llW"/>
-                                            <constraint firstItem="n4c-O8-8ji" firstAttribute="leading" secondItem="hrR-l2-TDg" secondAttribute="leading" constant="18" id="XlN-xv-iqd"/>
-                                            <constraint firstItem="n4c-O8-8ji" firstAttribute="centerY" secondItem="hrR-l2-TDg" secondAttribute="centerY" id="XpS-bo-bcC"/>
-                                        </constraints>
-                                    </customView>
-                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="CmV-WC-Vsv">
-                                        <rect key="frame" x="0.0" y="0.0" width="265" height="50"/>
-                                        <subviews>
-                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="TnP-RR-Te2" customClass="NSSwitch" customModule="Swwwitch" customModuleProvider="target">
-                                                <rect key="frame" x="217" y="15" width="30" height="20"/>
-                                            </customView>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SV4-Wa-f5R">
-                                                <rect key="frame" x="16" y="13" width="154" height="21"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Hide Desktop Icons" id="NZ1-Su-SCW">
-                                                    <font key="font" metaFont="system" size="17"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="TnP-RR-Te2" secondAttribute="trailing" constant="18" id="Pt4-wu-Epf"/>
-                                            <constraint firstItem="TnP-RR-Te2" firstAttribute="centerY" secondItem="CmV-WC-Vsv" secondAttribute="centerY" id="cHL-we-KLy"/>
-                                            <constraint firstAttribute="width" constant="265" id="w2o-pG-Wck"/>
-                                        </constraints>
-                                    </customView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="CmV-WC-Vsv" firstAttribute="height" secondItem="hrR-l2-TDg" secondAttribute="height" id="R5G-cF-aUH"/>
-                                    <constraint firstItem="TnP-RR-Te2" firstAttribute="width" secondItem="26N-av-2RY" secondAttribute="width" id="Xep-9B-isl"/>
-                                    <constraint firstAttribute="width" constant="265" id="oOQ-UQ-s8S"/>
-                                    <constraint firstItem="TnP-RR-Te2" firstAttribute="height" secondItem="26N-av-2RY" secondAttribute="height" id="zxS-o8-Ha1"/>
-                                </constraints>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fmA-rk-ZxL">
-                                <rect key="frame" x="16" y="12" width="101" height="18"/>
-                                <buttonCell key="cell" type="check" title="Start at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="iJY-vH-tfF">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="startAtLoginChecked:" target="XfG-lQ-9wD" id="dp5-Kh-QYn"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="dEU-5f-0Zw" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="75" id="2ks-kZ-4b8"/>
-                            <constraint firstItem="fmA-rk-ZxL" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="18" id="7aS-ha-0y5"/>
-                            <constraint firstItem="dEU-5f-0Zw" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="97V-mL-mPo"/>
-                            <constraint firstAttribute="bottom" secondItem="fmA-rk-ZxL" secondAttribute="bottom" constant="14" id="D9L-Wy-GBu"/>
-                            <constraint firstAttribute="bottom" secondItem="1Xm-Jg-7Q7" secondAttribute="bottom" constant="10" id="DxM-15-vUD"/>
-                            <constraint firstAttribute="trailing" secondItem="1Xm-Jg-7Q7" secondAttribute="trailing" constant="20" id="cUl-7c-YSp"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="hideDesktopContainerView" destination="CmV-WC-Vsv" id="rjX-N3-gLi"/>
-                        <outlet property="hideIconsSwitch" destination="TnP-RR-Te2" id="uu7-sO-sjB"/>
-                        <outlet property="startAtLoginButton" destination="fmA-rk-ZxL" id="liN-6Q-8gI"/>
-                        <outlet property="themeContainerView" destination="hrR-l2-TDg" id="vT0-mh-tql"/>
-                        <outlet property="themeSwitch" destination="26N-av-2RY" id="rTo-SN-M6Z"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="84" y="324"/>
-        </scene>
     </scenes>
-    <resources>
-        <image name="LogOut" width="22" height="22"/>
-    </resources>
 </document>

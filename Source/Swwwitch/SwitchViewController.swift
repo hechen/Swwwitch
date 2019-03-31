@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ServiceManagement
 
 class SwitchViewController: NSViewController {
     
@@ -14,10 +15,27 @@ class SwitchViewController: NSViewController {
     @IBOutlet weak var themeContainerView: NSView!
     
     @IBOutlet weak var hideDesktopContainerView: NSView!
+    @IBOutlet weak var startAtLoginButton: NSButton!
     
     
     @IBOutlet weak var themeSwitch: NSSwitch!
     @IBOutlet weak var hideIconsSwitch: NSSwitch!
+    
+    lazy var launchHelperIdentifier: String = {
+        return "app.chen.osx.SwwwitchLauncher"
+    }()
+    
+    var launchAtStartup: Bool {
+        get {
+            let jobs = SMCopyAllJobDictionaries(kSMDomainUserLaunchd).takeRetainedValue() as? [[String: AnyObject]]
+            return jobs?.contains(where: { $0["Label"] as! String == launchHelperIdentifier }) ?? false
+        }
+        set {
+            SMLoginItemSetEnabled(launchHelperIdentifier as CFString, newValue)
+        }
+    }
+    
+    let queue = DispatchQueue(label: "app.chen.osx.swwwitch.hidden")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +44,14 @@ class SwitchViewController: NSViewController {
         hideDesktopContainerView.backgroundColor = .clear
         
         hideIconsSwitch.delegate = self
-        hideIconsSwitch.setOn(on: DesktopIconHelper.hidden(), animated: true)
+        queue.async {
+            let hidden = DesktopIconHelper.hidden()
+            DispatchQueue.main.async {  [weak self] in
+                self?.hideIconsSwitch.setOn(on: hidden, animated: true)
+            }
+        }
         
+        startAtLoginButton.isOn = launchAtStartup
         themeSwitch.delegate = self
         themeSwitch.setOn(on: Appearance.isDarkTheme, animated: true)
     }
@@ -35,14 +59,30 @@ class SwitchViewController: NSViewController {
     @IBAction func quitAction(_ sender: Any) {
         NSApp.terminate(sender)
     }
+    
+    @IBAction func startAtLoginChecked(_ sender: Any) {
+        // change the launcher helper application's login status
+        if !SMLoginItemSetEnabled(launchHelperIdentifier as CFString, startAtLoginButton.isOn) {
+            // revert
+            startAtLoginButton.isOn = !startAtLoginButton.isOn
+            
+            let alert = NSAlert()
+            alert.messageText = "An error ocurred."
+            alert.addButton(withTitle: "OK")
+            alert.informativeText = "Couldn't add Helper App to launch at login item list."
+            alert.runModal()
+        }
+    }
 }
 
 extension SwitchViewController : NSSwitchDelegate {
     func switchChanged(switch switcher: NSSwitch) {
         switch switcher {
         case hideIconsSwitch:
-            if !DesktopIconHelper.switchHidden(switcher.on) {
-                print("Switch Hidden Failed!")
+            queue.async {
+                if !DesktopIconHelper.switchHidden(switcher.on) {
+                    print("Switch Hidden Failed!")
+                }
             }
         case themeSwitch:
             if !Appearance.switchTheme(dark: switcher.on) {
