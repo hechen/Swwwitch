@@ -17,6 +17,7 @@ Switch your system theme need your authorization. Just click OK.
 1. Switch your system theme using AppleScript
 2. Hide / Show your desktop icons using NSTask(aka Process)
 3. MenuBar only when your Cocoa Application is agent.
+4. Start at login using serviceManagement (embed a helper login app to wake main application up.)
 
 
 ### System Appearance Switch
