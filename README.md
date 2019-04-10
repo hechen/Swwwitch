@@ -1,5 +1,7 @@
 # Swwwitch
 
+![Build Status](https://travis-ci.com/hechen/Swwwitch.svg?branch=master)
+
 
 Just a swith tutorial.
 
