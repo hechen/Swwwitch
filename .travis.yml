@@ -1,0 +1,19 @@
+language: swift
+osx_image: xcode10.2
+xcode_destination: platform=macOS
+
+env:
+  global:
+  - LANG=en_US.UTF-8
+  - LC_ALL=en_US.UTF-8
+  - XCODE_PROJECT=Source/Swwwitch.xcodeproj
+  matrix:
+  - SCHEME="Swwwitch"
+
+script:
+  - set -o pipefail
+  - xcodebuild -project "$XCODE_PROJECT" -scheme "$SCHEME" -configuration Debug clean build | xcpretty -c
+  - xcodebuild -project "$XCODE_PROJECT" -scheme "$SCHEME" -configuration Release clean build | xcpretty -c
+
+notifications:
+  slack: $SLACK_CHANNEL

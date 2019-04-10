@@ -16,22 +16,13 @@ class Appearance {
     
     class func switchTheme(dark: Bool) -> Bool {
         
-        let myAppleScript = dark ? #"""
+        let myAppleScript = """
             tell application "System Events"
                 tell appearance preferences
-                    set dark mode to true
+                    set dark mode to \(dark ? "true" : "false")
                 end tell
             end tell
-        """# : #"""
-        tell application "System Events"
-        tell appearance preferences
-        set dark mode to false
-        end tell
-        end tell
-        """#
-        
-        
-        
+            """        
         var error: NSDictionary?
         guard let scriptObject = NSAppleScript(source: myAppleScript) else { return false }
         scriptObject.executeAndReturnError(&error)

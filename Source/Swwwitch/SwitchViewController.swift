@@ -62,6 +62,7 @@ class SwitchViewController: NSViewController {
     
     @IBAction func startAtLoginChecked(_ sender: Any) {
         // change the launcher helper application's login status
+        // for get return value. we use the method separately.
         if !SMLoginItemSetEnabled(launchHelperIdentifier as CFString, startAtLoginButton.isOn) {
             // revert
             startAtLoginButton.isOn = !startAtLoginButton.isOn
