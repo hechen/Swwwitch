@@ -15,7 +15,6 @@ class Appearance {
     }
     
     class func switchTheme(dark: Bool) -> Bool {
-        
         let myAppleScript = """
             tell application "System Events"
                 tell appearance preferences

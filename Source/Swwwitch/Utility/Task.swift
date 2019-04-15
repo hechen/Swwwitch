@@ -47,32 +47,5 @@ extension Task {
     }
 }
 
-/*
- defaults write com.apple.finder CreateDesktop true
- killall Finder
- */
-class SwitchDesktopIconTask: Task {
-    lazy var arguments: [String] = {
-        var argvs = ["-c"]
-        if self.hide {
-            argvs.append("defaults write com.apple.finder CreateDesktop false; killall Finder")
-        } else {
-            argvs.append("defaults write com.apple.finder CreateDesktop true; killall Finder")
-        }
-        return argvs
-    }()
-    
-    let hide: Bool
-    init(hide: Bool = true) {
-        self.hide = hide
-    }
-}
 
-class ReadDesktopIconHiddenTask: Task {    
-    var arguments: [String] {
-        return [
-        "-c",
-        "defaults read com.apple.finder CreateDesktop"
-        ]
-    }
-}
+

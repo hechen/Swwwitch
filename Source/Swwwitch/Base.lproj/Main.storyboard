@@ -705,10 +705,10 @@
                                 </buttonCell>
                             </button>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEU-5f-0Zw">
-                                <rect key="frame" x="18" y="174" width="265" height="101"/>
+                                <rect key="frame" x="18" y="123" width="265" height="152"/>
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="hrR-l2-TDg">
-                                        <rect key="frame" x="0.0" y="51" width="265" height="50"/>
+                                        <rect key="frame" x="0.0" y="102" width="265" height="50"/>
                                         <subviews>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="26N-av-2RY" customClass="NSSwitch" customModule="Swwwitch" customModuleProvider="target">
                                                 <rect key="frame" x="217" y="15" width="30" height="20"/>
@@ -727,6 +727,7 @@
                                             </textField>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="26N-av-2RY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="n4c-O8-8ji" secondAttribute="trailing" constant="8" symbolic="YES" id="7Jj-wa-o6O"/>
                                             <constraint firstAttribute="height" constant="50" id="9E8-6R-Dza"/>
                                             <constraint firstAttribute="trailing" secondItem="26N-av-2RY" secondAttribute="trailing" constant="18" id="M1X-XP-DmN"/>
                                             <constraint firstItem="26N-av-2RY" firstAttribute="centerY" secondItem="hrR-l2-TDg" secondAttribute="centerY" id="Rv7-bN-llW"/>
@@ -735,14 +736,13 @@
                                         </constraints>
                                     </customView>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="CmV-WC-Vsv">
-                                        <rect key="frame" x="0.0" y="0.0" width="265" height="50"/>
+                                        <rect key="frame" x="0.0" y="51" width="265" height="50"/>
                                         <subviews>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="TnP-RR-Te2" customClass="NSSwitch" customModule="Swwwitch" customModuleProvider="target">
                                                 <rect key="frame" x="217" y="15" width="30" height="20"/>
                                             </customView>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SV4-Wa-f5R">
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SV4-Wa-f5R">
                                                 <rect key="frame" x="16" y="13" width="154" height="21"/>
-                                                <autoresizingMask key="autoresizingMask"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Hide Desktop Icons" id="NZ1-Su-SCW">
                                                     <font key="font" metaFont="system" size="17"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -751,23 +751,55 @@
                                             </textField>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="SV4-Wa-f5R" firstAttribute="leading" secondItem="CmV-WC-Vsv" secondAttribute="leading" constant="18" id="A2A-mq-3Lg"/>
                                             <constraint firstAttribute="trailing" secondItem="TnP-RR-Te2" secondAttribute="trailing" constant="18" id="Pt4-wu-Epf"/>
                                             <constraint firstItem="TnP-RR-Te2" firstAttribute="centerY" secondItem="CmV-WC-Vsv" secondAttribute="centerY" id="cHL-we-KLy"/>
+                                            <constraint firstItem="TnP-RR-Te2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SV4-Wa-f5R" secondAttribute="trailing" symbolic="YES" id="d78-L3-dQ6"/>
+                                            <constraint firstItem="SV4-Wa-f5R" firstAttribute="top" secondItem="CmV-WC-Vsv" secondAttribute="top" constant="16" id="l8k-RG-8IL"/>
                                             <constraint firstAttribute="width" constant="265" id="w2o-pG-Wck"/>
+                                        </constraints>
+                                    </customView>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="x1I-cF-iSa">
+                                        <rect key="frame" x="0.0" y="0.0" width="265" height="50"/>
+                                        <subviews>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="BsZ-ki-oDy" customClass="NSSwitch" customModule="Swwwitch" customModuleProvider="target">
+                                                <rect key="frame" x="217" y="15" width="30" height="20"/>
+                                            </customView>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nIV-hT-MdS">
+                                                <rect key="frame" x="16" y="13" width="83" height="21"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Caffeinate" id="i8r-90-hKq">
+                                                    <font key="font" metaFont="system" size="17"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="BsZ-ki-oDy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nIV-hT-MdS" secondAttribute="trailing" constant="8" symbolic="YES" id="4T0-Ki-1dQ"/>
+                                            <constraint firstAttribute="width" constant="265" id="JP9-0M-SH3"/>
+                                            <constraint firstItem="nIV-hT-MdS" firstAttribute="top" secondItem="x1I-cF-iSa" secondAttribute="top" constant="16" id="K1I-et-6Na"/>
+                                            <constraint firstItem="nIV-hT-MdS" firstAttribute="leading" secondItem="x1I-cF-iSa" secondAttribute="leading" constant="18" id="iC7-b0-PKb"/>
+                                            <constraint firstAttribute="trailing" secondItem="BsZ-ki-oDy" secondAttribute="trailing" constant="18" id="nRH-7U-EKW"/>
+                                            <constraint firstItem="BsZ-ki-oDy" firstAttribute="centerY" secondItem="x1I-cF-iSa" secondAttribute="centerY" id="nkg-5f-oBP"/>
                                         </constraints>
                                     </customView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="x1I-cF-iSa" firstAttribute="height" secondItem="CmV-WC-Vsv" secondAttribute="height" id="Qt4-BZ-R3h"/>
                                     <constraint firstItem="CmV-WC-Vsv" firstAttribute="height" secondItem="hrR-l2-TDg" secondAttribute="height" id="R5G-cF-aUH"/>
                                     <constraint firstItem="TnP-RR-Te2" firstAttribute="width" secondItem="26N-av-2RY" secondAttribute="width" id="Xep-9B-isl"/>
+                                    <constraint firstItem="BsZ-ki-oDy" firstAttribute="width" secondItem="TnP-RR-Te2" secondAttribute="width" id="mbn-hU-yf8"/>
                                     <constraint firstAttribute="width" constant="265" id="oOQ-UQ-s8S"/>
+                                    <constraint firstItem="BsZ-ki-oDy" firstAttribute="height" secondItem="TnP-RR-Te2" secondAttribute="height" id="twx-gE-SJN"/>
                                     <constraint firstItem="TnP-RR-Te2" firstAttribute="height" secondItem="26N-av-2RY" secondAttribute="height" id="zxS-o8-Ha1"/>
                                 </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
@@ -789,10 +821,12 @@
                             <constraint firstItem="dEU-5f-0Zw" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="97V-mL-mPo"/>
                             <constraint firstAttribute="bottom" secondItem="fmA-rk-ZxL" secondAttribute="bottom" constant="14" id="D9L-Wy-GBu"/>
                             <constraint firstAttribute="bottom" secondItem="1Xm-Jg-7Q7" secondAttribute="bottom" constant="10" id="DxM-15-vUD"/>
+                            <constraint firstItem="1Xm-Jg-7Q7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fmA-rk-ZxL" secondAttribute="trailing" constant="8" symbolic="YES" id="SzC-Eo-2mO"/>
                             <constraint firstAttribute="trailing" secondItem="1Xm-Jg-7Q7" secondAttribute="trailing" constant="20" id="cUl-7c-YSp"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="caffeinateSwitch" destination="BsZ-ki-oDy" id="GAz-kg-MfV"/>
                         <outlet property="hideDesktopContainerView" destination="CmV-WC-Vsv" id="rjX-N3-gLi"/>
                         <outlet property="hideIconsSwitch" destination="TnP-RR-Te2" id="uu7-sO-sjB"/>
                         <outlet property="startAtLoginButton" destination="fmA-rk-ZxL" id="liN-6Q-8gI"/>

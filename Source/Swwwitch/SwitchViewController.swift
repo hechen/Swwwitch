@@ -20,6 +20,7 @@ class SwitchViewController: NSViewController {
     
     @IBOutlet weak var themeSwitch: NSSwitch!
     @IBOutlet weak var hideIconsSwitch: NSSwitch!
+    @IBOutlet weak var caffeinateSwitch: NSSwitch!
     
     lazy var launchHelperIdentifier: String = {
         return "app.chen.osx.SwwwitchLauncher"
@@ -35,7 +36,7 @@ class SwitchViewController: NSViewController {
         }
     }
     
-    let queue = DispatchQueue(label: "app.chen.osx.swwwitch.hidden")
+    let queue = DispatchQueue(label: "app.chen.osx.swwwitch.hidden", attributes: [.concurrent])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,16 +45,25 @@ class SwitchViewController: NSViewController {
         hideDesktopContainerView.backgroundColor = .clear
         
         hideIconsSwitch.delegate = self
+        themeSwitch.delegate = self
+        caffeinateSwitch.delegate = self
+    }
+    
+    override func viewWillAppear() {
         queue.async {
-            let hidden = DesktopIconHelper.hidden()
+            let hidden = IconHider.hidden()
             DispatchQueue.main.async {  [weak self] in
                 self?.hideIconsSwitch.setOn(on: hidden, animated: true)
             }
         }
-        
         startAtLoginButton.isOn = launchAtStartup
-        themeSwitch.delegate = self
         themeSwitch.setOn(on: Appearance.isDarkTheme, animated: true)
+        queue.async {
+            let active = Caffeinate.isActive
+            DispatchQueue.main.async { [weak self] in
+                self?.caffeinateSwitch.setOn(on: active, animated: true)
+            }
+        }
     }
     
     @IBAction func quitAction(_ sender: Any) {
@@ -61,8 +71,8 @@ class SwitchViewController: NSViewController {
     }
     
     @IBAction func startAtLoginChecked(_ sender: Any) {
-        // change the launcher helper application's login status
-        // for get return value. we use the method separately.
+        // change the launcher helper's login status
+        // for get return value. Use the method separately.
         if !SMLoginItemSetEnabled(launchHelperIdentifier as CFString, startAtLoginButton.isOn) {
             // revert
             startAtLoginButton.isOn = !startAtLoginButton.isOn
@@ -81,21 +91,24 @@ extension SwitchViewController : NSSwitchDelegate {
         switch switcher {
         case hideIconsSwitch:
             queue.async {
-                if !DesktopIconHelper.switchHidden(switcher.on) {
+                if !IconHider.switchHidden(switcher.on) {
                     print("Switch Hidden Failed!")
                 }
             }
         case themeSwitch:
-            if !Appearance.switchTheme(dark: switcher.on) {
-                print("Switch Theme Failed!")
+            queue.async {
+                if !Appearance.switchTheme(dark: switcher.on) {
+                    print("Switch Theme Failed!")
+                }
             }
-            
+        case caffeinateSwitch:
+            queue.async {
+                Caffeinate.switchCaffeinate(enable: switcher.on)
+            }
         default: break
-            
         }
     }
 }
-
 
 extension SwitchViewController {
     static func instantiateController() -> SwitchViewController {
