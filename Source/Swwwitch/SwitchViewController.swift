@@ -10,8 +10,6 @@ import Cocoa
 import ServiceManagement
 
 class SwitchViewController: NSViewController {
-    
-    
     @IBOutlet weak var themeContainerView: NSView!
     
     @IBOutlet weak var hideDesktopContainerView: NSView!
@@ -91,15 +89,11 @@ extension SwitchViewController : NSSwitchDelegate {
         switch switcher {
         case hideIconsSwitch:
             queue.async {
-                if !IconHider.switchHidden(switcher.on) {
-                    print("Switch Hidden Failed!")
-                }
+                IconHider.switchHidden(switcher.on)
             }
         case themeSwitch:
             queue.async {
-                if !Appearance.switchTheme(dark: switcher.on) {
-                    print("Switch Theme Failed!")
-                }
+                Appearance.switchTheme(dark: switcher.on)
             }
         case caffeinateSwitch:
             queue.async {

@@ -60,5 +60,19 @@ applescript://com.apple.scripteditor?action=new&name=Hide%20Desktop%20Icons&scri
 applescript://com.apple.scripteditor?action=new&name=Hide%20Desktop%20Icons&script=tell%20application%20%22Terminal%22%0D%20%20%20%20do%20script%20%22defaults%20write%20com.apple.finder%20CreateDesktop%20true%3b%20killall%20Finder%22%0Dend%20tell
 ```
 
+
+### Caffeinate
+
+``` Shell
+# enable caffeinate forever.
+# never return.
+caffeinate
+
+# disable caffeinate
+killall caffeinate 
+```
+
+
+
 ## Links
 [Checkout all command lines macOS Support](https://ss64.com/osx/)

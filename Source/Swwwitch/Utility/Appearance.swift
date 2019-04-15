@@ -14,6 +14,7 @@ class Appearance {
         return NSAppearance.current.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
     }
     
+    @discardableResult
     class func switchTheme(dark: Bool) -> Bool {
         let myAppleScript = """
             tell application "System Events"

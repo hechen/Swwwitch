@@ -1,5 +1,5 @@
 //
-//  DesktopIconHelper.swift
+//  IconHider.swift
 //  Swwwitch
 //
 //  Created by chen he on 2019/3/30.
@@ -22,6 +22,7 @@ class IconHider {
         return false
     }
     
+    @discardableResult
     class func switchHidden(_ hide: Bool = true) -> Bool {
         if hidden() == hide { return true }
         return SwitchDesktopIconTask(hide: hide).executeSync().success

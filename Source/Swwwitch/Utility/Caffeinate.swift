@@ -21,8 +21,8 @@ class Caffeinate {
         return false
      }
     
-    /// need be cautious, caffeinate without time param will not return...
-    /// execute kill caffeinate will ternimate the previous enable one, which will return
+    /// Be cautious, caffeinate without time param will not return
+    /// until the execution of `kill caffeinate` which will terminate the previous caffeinate command.
     class func switchCaffeinate(enable: Bool) {
         _ = CaffeinateTask(enable: enable).executeSync()
     }
@@ -30,9 +30,7 @@ class Caffeinate {
 
 class CheckCaffeinateTask: Task {
     var arguments: [String] {
-        return [
-            "-c",
-            "ps -eo etime,args|grep caffeinate|grep -v grep|sed -e 's|^[[:space:]]*||'"]
+        return ["-c", "ps -eo etime,args|grep caffeinate|grep -v grep|sed -e 's|^[[:space:]]*||'"]
     }
 }
 
